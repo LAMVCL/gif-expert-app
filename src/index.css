@@ -1,0 +1,15 @@
+*{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: xx-large;
+  color: #FFFFFF;
+}
+
+body{
+  padding: 60px;
+  background-color: #015474;
+}
+button{
+  background-color: #02202c;
+  border-radius: 5px;
+  font-size: 20px;
+}
