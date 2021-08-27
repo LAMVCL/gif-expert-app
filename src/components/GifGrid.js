@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { GifGridItem } from './GifGridItem';
 
 export const GifGrid = ({category}) => {
 
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        getGifs();
+    }, [])
+
     const getGifs = async() =>{
 
-        const url = 'https://api.giphy.com/v1/gifs/search?q=Rick and morty&limit=10&api_key=g1dCiL4mecdpaOWgTGtlvZzrLr0c9nBW';
-        const respuesta = await fetch(url);
+        const urlFetch = 'https://api.giphy.com/v1/gifs/search?q=Rick and morty&limit=10&api_key=g1dCiL4mecdpaOWgTGtlvZzrLr0c9nBW';
+        const respuesta = await fetch(urlFetch);
         //Destructuramos data para evitar poner data.data
         const {data} = await respuesta.json();
 
@@ -13,21 +20,25 @@ export const GifGrid = ({category}) => {
             return {
                 id: img.id,
                 title: img.title,
-                url: img.images?.downsized_medium.url
+                url: img.images.downsized_medium.url,
             }
         });
 
-        
-
         console.log(gifs);
+        //Le pasamos el array de 10 imagenes con su id, titulo y url
+        setImages(gifs);
     }
-
-
-    getGifs();
 
     return (
         <div>
             <h3>{category}</h3>
+            {
+                images.map( (img) => {
+
+                    return <GifGridItem key={img.id} {...img}
+                    />
+                })
+            }
         </div>
     )
 }
