@@ -8,9 +8,11 @@ export const GifGrid = ({category}) => {
 
     return (
         <>
-            <h3 className='categoriaBuscada'>{category}</h3>
+            <h3 className="categoriaBuscada">{category}</h3>
 
-            {loading ? <p>Loading...</p> : <p>Gifs cargados!</p>}
+            {loading ? 
+            <p className="loading animate__animated animate__flash">Loading...</p> : 
+            <p className="loading animate__animated animate__pulse">Gifs cargados!</p>}
 
             <div className="card-grid">
                 {
