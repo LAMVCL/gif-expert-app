@@ -22,7 +22,7 @@ export const AddCategory = ({setCategories}) => {
         
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='formulario' onSubmit={handleSubmit}>
             <input 
             type="text"
             value={inputValue}
@@ -31,7 +31,7 @@ export const AddCategory = ({setCategories}) => {
                 handleInputChange
             }
             />
-            <button>GET GIF'S!</button>
+            <button ><i class="fas fa-search"></i></button>
         </form>
     )
 }
