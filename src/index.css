@@ -1,30 +1,60 @@
 *{
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
 }
 html{
   min-height: 100%;
 }
 body{
-  background: linear-gradient(180deg, rgb(6, 1, 90) 0%, rgba(9,9,121,1) 24%, rgba(7,130,156,1) 100%);
+  background: #f1faee;
+}
+
+h2{
+  margin-left: 20px;
+}
+.header{
+  background: #4361ee;
+  width:100%;
+  height: 120px;;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.formulario{
+  display: inline-block;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+input,button {
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 button{
-  background-color: #1178a0;
-  margin-top: 10px;
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
+  background-color: #4895ef;
+  border: 1px solid transparent;
 }
 
 input{
-  color: grey;  
-  font-size: 1.2rem;
-  width:100%;
+  background: #fff;
+  color: #a3a3a3;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1); 
+	outline: 0;
+  border: 1px solid transparent;
 }
 
+h3{
+  color: #1d3557;
+}
 .categoriaBuscada{
+  text-align: center;
+}
+
+.loading{
+  color: #1d3557;
   text-align: center;
 }
 
@@ -49,12 +79,14 @@ input{
 .card{
   width: auto;
   display: inline-block;
-  border: 1px solid rgb(187, 187, 187);
+  border: 1px solid #caf0f8;
+  border-radius: 5px;
   margin-bottom: 10px;
 
 }
 
 .card p{
+  color: #1d3557;
   text-align: center;
 }
 
