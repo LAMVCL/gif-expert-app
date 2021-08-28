@@ -5,7 +5,7 @@ import { GifGrid } from './components/GifGrid';
 
 export const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['']);
+    const [categories, setCategories] = useState([]);
 
     /* const handleAdd = () =>{
         const newElement = 'Hunter x Hunter';
@@ -17,16 +17,16 @@ export const GifExpertApp = () => {
 
     return (
         <div>
-            <h2>GifExpertApp</h2>
+            <h2>Gif Expert App</h2>
             <AddCategory setCategories={setCategories}/>
             <hr></hr>
-            <ol>
+            <div className="contenido">
                 {
                     categories.map((category)=>{
                         return <GifGrid key={category} category={category}/>
                     })
                 }
-            </ol>
+            </div>
         </div>
     )
 }
