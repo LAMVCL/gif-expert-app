@@ -15,7 +15,7 @@ export const AddCategory = ({setCategories}) => {
         //Validamos que el input posea texto mediante un length
         if (inputValue.trim().length > 2){
             //De ser valido asignamos el texto al array mediante setCategories
-            setCategories(newCategorie => [...newCategorie, inputValue]);
+            setCategories(newCategorie => [inputValue,...newCategorie ]);
             //Vaciamos el input para evitar duplicados al presionar doble submit
             setInputValue('');
         }

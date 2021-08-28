@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { getGifs } from '../helpers/getGifs';
 import { GifGridItem } from './GifGridItem';
 
 export const GifGrid = ({category}) => {
@@ -6,27 +7,13 @@ export const GifGrid = ({category}) => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        getGifs();
-    }, [])
+        //Llamamos a la función getGifs del helper pasandole la categoria
+        //Al ser una promesa ocupamos un then donde con la arrow function
+        //Recibiremos las imagenes para utilizarlas en el useState setImages
+        getGifs(category).then(imgs => setImages(imgs));
+    }, [category])
 
-    const getGifs = async() =>{
-
-        const urlFetch = `https://api.giphy.com/v1/gifs/search?q=${category}&limit=10&api_key=g1dCiL4mecdpaOWgTGtlvZzrLr0c9nBW`;
-        const respuesta = await fetch(urlFetch);
-        //Destructuramos data para evitar poner data.data
-        const {data} = await respuesta.json();
-
-        const gifs = data.map(img => {
-            return {
-                id: img.id,
-                title: img.title,
-                url: img.images.downsized.url,
-            }
-        });
-        
-        //Le pasamos el array de 10 imagenes con su id, titulo y url
-        setImages(gifs);
-    }
+    
 
     return (
         <>
