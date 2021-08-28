@@ -3,13 +3,17 @@
   font-size: x-large;
   color: #FFFFFF;
 }
-
+html{
+  min-height: 100%;
+}
 body{
-  padding: 60px;
-  background-color: #015474;
+  background: linear-gradient(180deg, rgb(6, 1, 90) 0%, rgba(9,9,121,1) 24%, rgba(7,130,156,1) 100%);
 }
 button{
-  background-color: #02202c;
+  background-color: #1178a0;
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
   border-radius: 5px;
   font-size: 20px;
 }
@@ -17,32 +21,38 @@ button{
 input{
   color: grey;  
   font-size: 1.2rem;
-  width: 100%;
+  width:100%;
+}
+
+.categoriaBuscada{
+  text-align: center;
+}
+
+.contenido{
+  width: auto;
+  
 }
 
 .card-grid{
-  display: flexbox;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin: auto;
 }
 
 .card{
-  align-content: center;
-  border: 1px solid grey;
-  border-radius: 6px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid rgb(187, 187, 187);
   margin-bottom: 10px;
-  margin-right: 10px;
-  overflow: hidden;
 
 }
 
 .card p{
-  padding: 5px;
   text-align: center;
 }
 
 .card img{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  max-width:100%;
+  max-height:100%;
+  
 }
