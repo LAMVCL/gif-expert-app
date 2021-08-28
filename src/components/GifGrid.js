@@ -11,7 +11,7 @@ export const GifGrid = ({category}) => {
 
     const getGifs = async() =>{
 
-        const urlFetch = 'https://api.giphy.com/v1/gifs/search?q=Rick and morty&limit=10&api_key=g1dCiL4mecdpaOWgTGtlvZzrLr0c9nBW';
+        const urlFetch = `https://api.giphy.com/v1/gifs/search?q=${category}&limit=10&api_key=g1dCiL4mecdpaOWgTGtlvZzrLr0c9nBW`;
         const respuesta = await fetch(urlFetch);
         //Destructuramos data para evitar poner data.data
         const {data} = await respuesta.json();
@@ -20,7 +20,7 @@ export const GifGrid = ({category}) => {
             return {
                 id: img.id,
                 title: img.title,
-                url: img.images.downsized_medium.url,
+                url: img.images.downsized.url,
             }
         });
 
@@ -30,15 +30,19 @@ export const GifGrid = ({category}) => {
     }
 
     return (
-        <div>
+        <>
             <h3>{category}</h3>
-            {
-                images.map( (img) => {
+            <div className="card-grid">
+                
+                {
+                    images.map( (img) => {
 
-                    return <GifGridItem key={img.id} {...img}
-                    />
-                })
-            }
-        </div>
+                        return <GifGridItem key={img.id} {...img}
+                        />
+                    })
+                }
+            </div>
+        </>
+        
     )
 }

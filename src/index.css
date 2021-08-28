@@ -1,6 +1,6 @@
 *{
   font-family: Helvetica, Arial, sans-serif;
-  font-size: xx-large;
+  font-size: x-large;
   color: #FFFFFF;
 }
 
@@ -18,4 +18,31 @@ input{
   color: grey;  
   font-size: 1.2rem;
   width: 100%;
+}
+
+.card-grid{
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card{
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+
+}
+
+.card p{
+  padding: 5px;
+  text-align: center;
+}
+
+.card img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
