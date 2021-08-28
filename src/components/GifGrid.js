@@ -23,17 +23,15 @@ export const GifGrid = ({category}) => {
                 url: img.images.downsized.url,
             }
         });
-
-        console.log(gifs);
+        
         //Le pasamos el array de 10 imagenes con su id, titulo y url
         setImages(gifs);
     }
 
     return (
         <>
-            <h3>{category}</h3>
+            <h3 className='categoriaBuscada'>{category}</h3>
             <div className="card-grid">
-                
                 {
                     images.map( (img) => {
 

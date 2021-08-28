@@ -31,7 +31,7 @@ export const AddCategory = ({setCategories}) => {
                 handleInputChange
             }
             />
-            <button>enviar!</button>
+            <button>GET GIF'S!</button>
         </form>
     )
 }
