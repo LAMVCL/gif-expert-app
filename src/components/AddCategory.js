@@ -31,7 +31,7 @@ export const AddCategory = ({setCategories}) => {
                 handleInputChange
             }
             />
-            <button ><i class="fas fa-search"></i></button>
+            <button ><i className="fas fa-search"></i></button>
         </form>
     )
 }
