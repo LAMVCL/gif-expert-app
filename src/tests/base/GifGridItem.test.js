@@ -7,7 +7,7 @@ describe('Pruebas en <GifGridItem/>', () =>{
     const title = 'Un titulo';
     const url = 'https://localhost/algo.jpg'
 
-    let wrapper = shallow(<GifGridItem title={title} url={url}/>);
+    const wrapper = shallow(<GifGridItem title={title} url={url}/>);
 
     test('Debe mostrar el <GifGridItem/> correctamente', () =>{
 
