@@ -7,6 +7,7 @@ export const AddCategory = ({setCategories}) => {
     const [inputValue, setInputValue] = useState('');
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
+
     }
     const handleSubmit = (e) =>{
         //Bloqueamos la actualización de la página
@@ -23,13 +24,12 @@ export const AddCategory = ({setCategories}) => {
     }
     return (
         <form className='formulario' onSubmit={handleSubmit}>
+            <p>{inputValue}</p>
             <input 
             type="text"
             value={inputValue}
             placeholder='Buscar...'
-            onChange={
-                handleInputChange
-            }
+            onChange={handleInputChange}
             />
             <button ><i className="fas fa-search"></i></button>
         </form>
