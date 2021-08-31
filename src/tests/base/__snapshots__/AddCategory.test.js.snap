@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Set de pruebas de AddCategory prueba de snapshot en <AddCategory/>  1`] = `
+<form
+  className="formulario"
+  onSubmit={[Function]}
+>
+  <p />
+  <input
+    onChange={[Function]}
+    placeholder="Buscar..."
+    type="text"
+    value=""
+  />
+  <button>
+    <i
+      className="fas fa-search"
+    />
+  </button>
+</form>
+`;
