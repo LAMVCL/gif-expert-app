@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Set de pruebas de GifGrid prueba de snapshot en <GifGrid/>  1`] = `
+<Fragment>
+  <h3
+    className="categoriaBuscada"
+  >
+    One punch
+  </h3>
+  <p
+    className="loading animate__animated animate__flash"
+  >
+    Loading...
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
